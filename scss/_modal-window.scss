@@ -1,0 +1,30 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, .8);
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.modal__window {
+  position: relative;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 0;
+  background-color: var(--firm-light);
+}
+
+.modal__btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: $blue;
+    font-size: 70px;
+    width: 70px;
+    height: 70px;
+    background: transparent;
+}
