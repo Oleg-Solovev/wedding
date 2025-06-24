@@ -1,0 +1,37 @@
+.greeting {
+    position: relative;
+    padding-top: 70px;
+}
+
+.greeting__cloud {
+    position: absolute;
+    top: -50px;
+    left: -40px;
+}
+
+.greeting__calendar {
+    position: relative;
+    width: 370px;
+    height: 210px;
+    background-image: url(../img/calendar.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.greeting__heart-in-calendar {
+    position: absolute;
+    top: 140px;
+    right: 60px;
+}
+
+.greeting__timer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.greeting__picture {
+    margin: 20px 10px;
+}
