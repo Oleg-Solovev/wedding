@@ -77,6 +77,15 @@ ul {
   clip-path: inset(100%);
 }
 
+.btn {
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
 .section {
   background-color: rgb(193, 237, 250);
   padding: 30px 5px;
@@ -97,15 +106,6 @@ ul {
   font-size: 25px;
 }
 
-.btn {
-  border: none;
-  outline: none;
-  font-size: 20px;
-}
-.btn:hover {
-  cursor: pointer;
-}
-
 .section__btn {
   padding: 10px 20px;
   border-radius: 7px;
@@ -120,6 +120,18 @@ ul {
 }
 .section__btn:active {
   background-color: #e932c9;
+}
+
+.section__list,
+.section__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.section__list {
+  gap: 30px;
 }
 
 .hero {
@@ -256,4 +268,8 @@ ul {
   width: 70px;
   height: 70px;
   background: transparent;
+}
+
+.wishes {
+  background-image: url();
 }/*# sourceMappingURL=style.css.map */
