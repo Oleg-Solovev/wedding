@@ -40,11 +40,23 @@
   <main class="main">
     <section class="hero">
       <h1 class="hero__title"><span>олег</span><span>и</span><span>Анна</span></h1>
-
+      <picture class="hero__img-animated">
+        <source media="(min-width: 400px)" width="200px" srcset="img/balloons.png">
+        <img src="img/balloons-min.png" width="100px" alt="Воздушные шарики, анимация">
+      </picture>
     </section>
 
     <section class="section greeting">
-      <img class="greeting__cloud" src="img/cloud.png" width="300px" alt="Облачко">
+      <div class="greeting__cloud-box">
+        <picture class="greeting__cloud">
+          <source media="(min-width: 400px)" width="500px" srcset="img/cloud.png">
+          <img src="img/cloud-min.png" width="300px" alt="Облачко, анимация">
+        </picture>
+        <picture class="greeting__cloud-animated">
+          <source media="(min-width: 400px)" width="500px" srcset="img/cloud.png">
+          <img src="img/cloud-min.png" width="300px" alt="Облачко, анимация">
+        </picture>
+      </div>
       <div class="container greeting__container">
 
         <p class="section__descr-XXL">Дорогие родные и друзья!</p>
@@ -76,8 +88,9 @@
 
         <picture class="greeting__picture">
           <source media="(min-width: 400px)" srcset="img/foto-gamak.jpg">
-          <img src="img/foto-gamak-xs.jpg" alt="Фото Олег и Анна в гамаке" style="width:auto;">
+          <img src="img/foto-gamak-xs.jpg" alt="Фото от Руты: Олег и Анна в гамаке" style="width:auto;">
         </picture>
+        <p class="section__descr greeting__picture-descr">Фото от Руты</p>
 
       </div>
     </section>
@@ -146,7 +159,8 @@
             <p class="section__descr">Фото и&nbsp;видео со&nbsp;свадьбы мв&nbsp;разместим позднее тут =&gt;</p>
           </li>
         </ul>
-        <a class="section__link" target="_blank" href="https://disk.yandex.ru/d/vx7XWZ3QY7vlwA"><button class="btn section__btn">Фото и видео</button></a>
+        <a class="section__link" target="_blank" href="https://disk.yandex.ru/d/vx7XWZ3QY7vlwA"><button
+            class="btn section__btn">Фото и видео</button></a>
       </div>
     </section>
 
