@@ -3,10 +3,25 @@
     padding-top: 70px;
 }
 
-.greeting__cloud {
+.greeting__cloud-box {
     position: absolute;
-    top: -50px;
-    left: -40px;
+    overflow: hidden;
+    width: 108%;
+    height: 180px;
+    top: -4%;
+    left: -4%;
+    z-index: 5;
+}
+
+.greeting__cloud,
+.greeting__cloud-animated {
+    position: absolute;
+    width: 100%;
+    left: -180px;
+}
+
+.greeting__cloud-animated {
+    animation: moveRight 30s linear infinite;
 }
 
 .greeting__calendar {
@@ -23,6 +38,7 @@
     position: absolute;
     top: 140px;
     right: 60px;
+    animation: moveBottom 3s 1;
 }
 
 .greeting__timer {
@@ -34,4 +50,59 @@
 
 .greeting__picture {
     margin: 20px 10px;
+}
+
+.greeting__picture-descr {
+    text-align: right;
+    margin-left: auto;
+    margin-top: -35px;
+    margin-right: 10px;
+}
+
+@keyframes moveRight {
+    0% {
+        left: -180px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes moveBottom {
+    0% {
+        top: -180px;
+    }
+
+    80% {
+        top: 140px;
+    }
+
+    100% {
+        top: 140px;
+    }
+}
+
+
+@media (min-width: 400px) {
+
+    .greeting__cloud-box {
+        height: 180px;
+    }
+
+    .greeting__cloud,
+    .greeting__cloud-animated {
+        left: -280px;
+    }
+
+    @keyframes moveRight {
+        0% {
+            left: -280px;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+
 }

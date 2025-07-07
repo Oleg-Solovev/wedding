@@ -135,12 +135,13 @@ ul {
 }
 
 .hero {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   padding: 50px 0px;
-  background-color: rgb(199, 246, 230);
+  background-color: rgb(193, 237, 250);
   background-image: url(../img/hero-fon-xs.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,6 +173,22 @@ ul {
   text-align: right;
 }
 
+.hero__img-animated {
+  position: absolute;
+  bottom: -100px;
+  left: 20%;
+  transform: translateX(-50%);
+  animation: moveUp 10s linear infinite;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
 @media (min-width: 400px) {
   .hero {
     background-image: url(../img/hero-fon.jpg);
@@ -182,10 +199,25 @@ ul {
   padding-top: 70px;
 }
 
-.greeting__cloud {
+.greeting__cloud-box {
   position: absolute;
-  top: -50px;
-  left: -40px;
+  overflow: hidden;
+  width: 108%;
+  height: 180px;
+  top: -4%;
+  left: -4%;
+  z-index: 5;
+}
+
+.greeting__cloud,
+.greeting__cloud-animated {
+  position: absolute;
+  width: 100%;
+  left: -180px;
+}
+
+.greeting__cloud-animated {
+  animation: moveRight 30s linear infinite;
 }
 
 .greeting__calendar {
@@ -202,6 +234,7 @@ ul {
   position: absolute;
   top: 140px;
   right: 60px;
+  animation: moveBottom 3s 1;
 }
 
 .greeting__timer {
@@ -215,6 +248,49 @@ ul {
   margin: 20px 10px;
 }
 
+.greeting__picture-descr {
+  text-align: right;
+  margin-left: auto;
+  margin-top: -35px;
+  margin-right: 10px;
+}
+
+@keyframes moveRight {
+  0% {
+    left: -180px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes moveBottom {
+  0% {
+    top: -180px;
+  }
+  80% {
+    top: 140px;
+  }
+  100% {
+    top: 140px;
+  }
+}
+@media (min-width: 400px) {
+  .greeting__cloud-box {
+    height: 180px;
+  }
+  .greeting__cloud,
+  .greeting__cloud-animated {
+    left: -280px;
+  }
+  @keyframes moveRight {
+    0% {
+      left: -280px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}
 .timer {
   width: 320px;
   display: grid;
