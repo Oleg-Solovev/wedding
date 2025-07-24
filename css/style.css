@@ -106,6 +106,10 @@ ul {
   font-size: 25px;
 }
 
+.section__descr--red {
+  color: rgb(219, 53, 53);
+}
+
 .section__btn {
   padding: 10px 20px;
   border-radius: 7px;
@@ -116,10 +120,10 @@ ul {
   transition: background-color 0.3s ease-in-out;
 }
 .section__btn:hover {
-  background-color: #ee60d5;
+  background-color: rgb(238.104, 95.896, 212.76);
 }
 .section__btn:active {
-  background-color: #e932c9;
+  background-color: rgb(233.208, 49.792, 200.52);
 }
 
 .section__list,
