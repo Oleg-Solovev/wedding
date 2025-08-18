@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link type="image/x-icon" href="img/logo.svg" rel="icon">
   <title>Олег и Анна</title>
+  <!-- Библиотека для просмотра изображений галереи -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js" defer></script>
   <!-- для формы на сайте -->
   <script type="text/javascript" async="async">
@@ -60,21 +62,21 @@
       <div class="container greeting__container">
 
         <p class="section__descr-XXL">Дорогие родные и друзья!</p>
-        <p class="section__descr-XXL">Мы женимся!</p>
+        <p class="section__descr-XXL">Мы поженились!</p>
 
         <picture class="greeting__picture">
-          <source media="(min-width: 400px)" srcset="img/foto-vdnh-xl.jpg">
-          <img src="img/foto-vdnh-xs.jpg" alt="Фото Олег и Анна на ВДНХ" style="width:auto;">
+          <source media="(min-width: 400px)" srcset="img/foto/foto-01s.JPG">
+          <img src="img/foto/foto-01.JPG" alt="Фото Олег и Анна" style="width:auto;">
         </picture>
 
-        <p class="section__descr">И этот день мы хотим провести вместе с вами!
-          Приглашаем на нашу свадьбу, которая состоится:</p>
+        <p class="section__descr">Мы были рады провести этот день вместе с&nbsp;вами!</p>
         <div class="greeting__calendar">
           <img class="greeting__heart-in-calendar" src="img/heart-in-calendar.svg" width="60px"
             alt="Сердце в календаре">
         </div>
+
         <div class="greeting__timer">
-          <p class="section__descr-XXL">До торжества осталось:</p>
+          <p class="section__descr-XXL">До годовщины свадьбы осталось:</p>
           <div class="timer">
             <div class="timer__item timer__days">00</div>
             <div class="separator">:</div>
@@ -86,11 +88,44 @@
           </div>
         </div>
 
+        <!-- <div class="gallery">
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="img/foto/foto-01s.JPG" data-fslightbox="gallery" class="gallery__link"
+                  aria-label="Посмотреть подробнее">
+                  <img src="img/foto/foto-01.JPG" loading="lazy" alt="фото со свадьбы" class="gallery__image"></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="img/foto/foto-02s.JPG" data-fslightbox="gallery" class="gallery__link"
+                  aria-label="Посмотреть подробнее">
+                  <img src="img/foto/foto-02.JPG" loading="lazy" alt="фото со свадьбы" class="gallery__image"></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="img/foto/foto-03s.JPG" data-fslightbox="gallery" class="gallery__link"
+                  aria-label="Посмотреть подробнее">
+                  <img src="img/foto/foto-03.JPG" loading="lazy" alt="фото со свадьбы" class="gallery__image"></a>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-reset gallery__btn gallery__btn-prev" aria-label="Сдвинуть влево">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 11L0.999995 6L6 0.999998" />
+            </svg>
+          </button>
+          <button class="btn-reset gallery__btn gallery__btn-next" aria-label="Сдвинуть вправо">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 11L6.00001 6L1 0.999997" />
+            </svg>
+          </button>
+        </div> -->
+
         <picture class="greeting__picture">
-          <source media="(min-width: 400px)" srcset="img/foto-gamak.jpg">
-          <img src="img/foto-gamak-xs.jpg" alt="Фото от Руты: Олег и Анна в гамаке" style="width:auto;">
+          <source media="(min-width: 400px)" srcset="img/foto/foto-09s.JPG">
+          <img src="img/foto/foto-09.JPG" alt="Фото Олег и Анна играют в шахматы" style="width:auto;">
         </picture>
-        <p class="section__descr greeting__picture-descr">Фото от Руты</p>
+        <!-- <p class="section__descr greeting__picture-descr">Фото от Руты</p> -->
 
       </div>
     </section>
@@ -102,13 +137,13 @@
         <ul class="section__list">
 
           <li class="section__item">
-            <p class="section__descr section__descr--red"><b class="section__descr-XL">Внимание, место регистрации
-                поменялось!</b></p>
+            <!-- <p class="section__descr section__descr--red"><b class="section__descr-XL">Внимание, место регистрации
+                поменялось!</b></p> -->
             <p class="section__descr"><b class="section__descr-XL">11:30</b><br>Торжественная регистрация в <b
                 class="section__descr-XL">Таганском Дворце бракосочетания</b><br>
               по адресу: г. Москва, ул. Таганская, 44</p>
-            <p class="section__descr">Возможно, регистрация произойдёт чуть позже указанного времени и придётся
-              подождать перед ЗАГСом</p>
+            <!-- <p class="section__descr">Возможно, регистрация произойдёт чуть позже указанного времени и придётся
+              подождать перед ЗАГСом</p> -->
             <button class="btn section__btn" onclick="modalWindow(1)">На карте</button>
             <div id="location-map-1" class="location__map modal visually-hidden">
               <button class="btn modal__btn" onclick="modalWindow(1)">&times;</button>
@@ -150,22 +185,23 @@
 
         <ul class="section__list">
           <li class="section__item">
-            <p class="section__descr">Опрос</p>
+            <p class="section__descr">Опрос по напиткам:</p>
             <div data-formid="form_2SRtj37gmn3UoTRoqd92ElSiQ4SQ5FSJ"></div>
           </li>
           <li class="section__item">
-            <p class="section__descr">Мы&nbsp;за&nbsp;компактность в&nbsp;конверте! Не&nbsp;дарите нам объёмных
-              предметов и&nbsp;вещей!</p>
+            <p class="section__descr">Большое спасибо&nbsp;за&nbsp;подарки в&nbsp;конвертах!</p>
           </li>
           <li class="section__item">
-            <p class="section__descr">Дресс-код свободный. Не&nbsp;хотим создавать вам лишний дискомфорт!</p>
+            <p class="section__descr">Дресс-код был свободный. Не&nbsp;хотели создавать вам лишний дискомфорт!</p>
           </li>
           <li class="section__item">
-            <p class="section__descr">Фото и&nbsp;видео со&nbsp;свадьбы мы&nbsp;разместим позднее тут =&gt;</p>
+            <p class="section__descr">Фото и&nbsp;видео со&nbsp;свадьбы мы&nbsp;постепенно размещаем тут =&gt;</p>
           </li>
         </ul>
         <a class="section__link" target="_blank" href="https://disk.yandex.ru/d/vx7XWZ3QY7vlwA"><button
-            class="btn section__btn">Фото и видео</button></a>
+            class="btn section__btn">Фото (часть 1)</button></a>
+        <a class="section__link" target="_blank" href="https://cloud.mail.ru/public/PorE/k9ALrgq6j"><button
+            class="btn section__btn">Фото (часть 2)</button></a>
       </div>
     </section>
 
