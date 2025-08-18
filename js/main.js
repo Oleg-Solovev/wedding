@@ -1,5 +1,5 @@
 // Установите конечную дату
-const deadline = new Date('2025-07-26T11:30:00');
+const deadline = new Date('2026-07-26T11:30:00');
 
 // Найдите элементы DOM
 const elDays = document.querySelector('.timer__days');
@@ -41,6 +41,7 @@ const updateTimer = () => {
 updateTimer();
 const timerId = setInterval(updateTimer, 1000);
 
+// Открытие модального окна для карты
 function modalWindow(id) {
     const modalWindow = document.getElementById(`location-map-${id}`);
     modalWindow.classList.toggle("visually-hidden");
@@ -49,4 +50,19 @@ function modalWindow(id) {
 document.addEventListener("keydown", function (event) {
     if (event.key === "Escape")
         modalWindow(id)
+});
+
+// Галерея
+let swiper = new Swiper(".gallery-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 25,
+    pagination: {
+        el: ".gallery-pagination",
+        type: "fraction",
+        clickable: true
+    },
+    navigation: {
+        nextEl: ".gallery__btn-next",
+        prevEl: ".gallery__btn-prev"
+    },
 });
